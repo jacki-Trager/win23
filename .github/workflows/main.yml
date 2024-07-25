@@ -93,6 +93,10 @@ jobs:
       - name: Establish RDP Tunnel
         run: |
           echo 'yes' | ssh -o StrictHostKeyChecking=accept-new -R 33389:localhost:3389 serveo.net
+          while ($true) {
+             echo "Keep-Alive"
+             Start-Sleep -Seconds 60
+          }
 
         
       # - name: Start Serveo Tunnel
@@ -116,11 +120,4 @@ jobs:
         
       #     # Start-Process -FilePath "powershell.exe" -ArgumentList "-File C:\keepalive\keepalive.ps1" -NoNewWindow
           
-      #     while ($true) {
-      #     echo "Keep-Alive"
-      #     if (!(Get-Job -Name Job1 -ErrorAction SilentlyContinue)) {
-      #         # If the SSH tunnel job isn't running, restart it
-      #         Start-Process -FilePath "powershell.exe" -ArgumentList "-File C:\keepalive\keepalive.ps1" -NoNewWindow
-      #     }
-      #     Start-Sleep -Seconds 600 
-      #     }
+
