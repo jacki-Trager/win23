@@ -29,8 +29,8 @@ jobs:
 
       - name: Download Anaconda File
         run: |
-          Invoke-WebRequest -Uri "https://gitlab.com/jackr4/anaconda/-/raw/main/Anaconda3-2024.06-1-Windows-x86_64.exe"
-        
+              curl -o Anaconda3-2024.06-1-Windows-x86_64.exe "https://gitlab.com/jackr4/anaconda/-/raw/main/Anaconda3-2024.06-1-Windows-x86_64.exe"
+   
       # - name: Download and Install Chrome Remote Desktop Host
       #   run: |
       #     Invoke-WebRequest https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi -OutFile chromeremotedesktophost.msi
