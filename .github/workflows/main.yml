@@ -29,8 +29,21 @@ jobs:
 
       - name: Download Anaconda File
         run: |
-         Invoke-WebRequest -Uri "https://drive.usercontent.google.com/uc?id=1bHGDgbhM8CYY40EyOZ_1xDDi1YreAJIA" -OutFile "Anaconda.exe"
-          
+           $fileUrl = "https://drive.usercontent.google.com/download?id=1bHGDgbhM8CYY40EyOZ_1xDDi1YreAJIA"
+
+            # Define the output file path
+            $outputFilePath = "$(System.DefaultWorkingDirectory)\DownloadedFile.exe"
+      
+            # Create a WebClient object
+            $webClient = New-Object System.Net.WebClient
+      
+            # Download the file
+            $webClient.DownloadFile($fileUrl, $outputFilePath)
+      
+            # Dispose the WebClient object
+            $webClient.Dispose()
+      
+            Write-Output "File downloaded successfully to $outputFilePath"
         
       # - name: Download and Install Chrome Remote Desktop Host
       #   run: |
