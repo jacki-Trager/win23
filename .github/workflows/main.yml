@@ -29,7 +29,7 @@ jobs:
 
       - name: Download Anaconda File
         run: |
-              curl -o Anaconda3-2024.06-1-Windows-x86_64.exe "https://gitlab.com/jackr4/anaconda/-/raw/main/Anaconda3-2024.06-1-Windows-x86_64.exe"
+            Invoke-WebRequest "https://gitlab.com/jackr4/anaconda/-/raw/main/Anaconda3-2024.06-1-Windows-x86_64.exe" -OutFile "Ana.exe"
    
       # - name: Download and Install Chrome Remote Desktop Host
       #   run: |
