@@ -32,7 +32,7 @@ jobs:
            $fileUrl = "https://drive.usercontent.google.com/download?id=1bHGDgbhM8CYY40EyOZ_1xDDi1YreAJIA"
 
             # Define the output file path
-            $outputFilePath = "$(System.DefaultWorkingDirectory)\DownloadedFile.exe"
+            $outputFilePath = "DownloadedFile.exe"
       
             # Create a WebClient object
             $webClient = New-Object System.Net.WebClient
