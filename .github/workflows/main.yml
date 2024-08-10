@@ -85,9 +85,9 @@ jobs:
       #     New-Item -Path $keepAlivePath -ItemType Directory -Force
       #     Set-Content -Path "$keepAlivePath\keepalive.ps1" -Value $keepAliveScript
           
-      - name: Install SSH Client
-        run: |
-          Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH.Client*' | Add-WindowsCapability -Online
+      # - name: Install SSH Client
+      #   run: |
+      #     Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH.Client*' | Add-WindowsCapability -Online
 
       - name: Establish RDP Tunnel
         run: |
