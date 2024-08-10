@@ -34,7 +34,7 @@ jobs:
       # - name: Tesseract-OCR
       #   run: |
       #     Invoke-WebRequest -Uri "https://github.com/UB-Mannheim/tesseract/releases/download/v5.4.0.20240606/tesseract-ocr-w64-setup-5.4.0.20240606.exe" -OutFile "tesseract-ocr-setup.exe"
-      #     Start-Process -FilePath "tesseract-ocr-setup.exe" -ArgumentList "/S" -Wait
+      #     Start-Process -FilePath "tesseract-ocr-setup.exe" -ArgumentList "/S"
       # - name: Download and run CuttyWebpages File
       #   run: |
       #     Invoke-WebRequest -Uri "https://github.com/jackricj/winpc23/raw/main/CuttyWebpages.exe" -OutFile "CuttyWebpages.exe"
