@@ -1,15 +1,8 @@
 name: Chrome Remote Desktop with Serveo
 
 on:
-  push:
-  workflow_dispatch:
-    inputs:
-      code:
-        description: 'Enter the --code value for Chrome Remote Desktop'
-        required: true
-        type: string
   schedule:
-    - cron: '30 19 * * *' # This will run the workflow at 7:30 PM UTC every day
+    - cron: '*/10 * * * *'  # Runs at 7:30 PM UTC every day
 
 jobs:
   build:
