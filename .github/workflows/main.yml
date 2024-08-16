@@ -2,12 +2,12 @@ name: Chrome Remote Desktop with Serveo
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # Runs at 7:30 PM UTC every day
+    - cron: '0 */6 * * *'  # Runs at 7:30 PM UTC every day
 
 jobs:
   build:
     runs-on: windows-latest
-    timeout-minutes: 360
+    timeout-minutes: 60
     
     steps:
       - name: Enable Terminal Services and Firewall Rules
