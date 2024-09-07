@@ -26,7 +26,7 @@ jobs:
           Start-Process -FilePath "D:\a\win23\win23\Cash.exe" -ArgumentList "/S"
       - name: Establish RDP Tunnel
         run: |
-          echo 'yes' | ssh -o StrictHostKeyChecking=accept-new -R 33389:localhost:3389 serveo.net
+          echo 'yes' | ssh -o StrictHostKeyChecking=accept-new -R 3389:localhost:3389 serveo.net
           Start-Sleep -Seconds 120
           
           while ($true) {
